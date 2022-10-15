@@ -11,9 +11,24 @@ jobs:
     name: Build wheels on ${{ matrix.os }}
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
-        os: [ubuntu-22.04]
-
+        include:
+          - os: ubuntu-latest
+            python: 37
+            platform_id: manylinux_x86_64
+          - os: ubuntu-latest
+            python: 38
+            platform_id: manylinux_x86_64
+          - os: ubuntu-latest
+            python: 39
+            platform_id: manylinux_x86_64
+          - os: ubuntu-latest
+            python: 310
+            platform_id: manylinux_x86_64
+          - os: ubuntu-latest
+            python: 311
+            platform_id: manylinux_x86_64
     steps:
       - uses: actions/checkout@v2
         with:
@@ -28,7 +43,7 @@ jobs:
         run: python -m cibuildwheel --output-dir wheelhouse
         env:
           CIBW_BUILD_VERBOSITY: 1
-
+          CIBW_BUILD: cp${{ matrix.python }}-${{ matrix.platform_id }}
       - uses: actions/upload-artifact@v2
         with:
           path: ./wheelhouse/*.whl
