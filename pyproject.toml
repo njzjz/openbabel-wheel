@@ -56,7 +56,7 @@ include = ["openbabel*"]
 [tool.setuptools_scm]
 
 [tool.cibuildwheel]
-test-command = "python -m 'from openbabel import openbabel'"
+test-command = "python -c 'from openbabel import openbabel'"
 
 [tool.cibuildwheel.linux]
 # refer rdkit-pypi
