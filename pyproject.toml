@@ -57,7 +57,6 @@ include = ["openbabel*"]
 
 [tool.cibuildwheel]
 test-command = "python -m 'from openbabel import openbabel'"
-manylinux-x86_64-image = "pypa/manylinux2010_x86_64:latest"
 
 [tool.cibuildwheel.linux]
 # refer rdkit-pypi
