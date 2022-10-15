@@ -1,0 +1,55 @@
+[build-system]
+requires = [
+    "setuptools>=61",
+    "setuptools_scm[toml]>=6.2",
+    "wheel",
+    "cmake_build_extension",
+    "cmake",
+    "ninja",
+    "swig",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openbabel-wheel"
+dynamic = ["version"]
+description = "An unofficial repository to distribute OpenBabel prebuilt wheels through Pypi.."
+authors = [
+  {name = "Jinzhe Zeng", email = "jinzhe.zeng@rutgers.edu"},
+  {name = "Noel O'Boyle", email = "openbabel-discuss@lists.sourceforge.net"},
+]
+license = {file = "LICENSE"}
+classifiers = [
+    'Development Status :: 5 - Production/Stable',
+    'Environment :: Console',
+    'Environment :: Other Environment',
+    'Intended Audience :: Education',
+    'Intended Audience :: Science/Research',
+    'License :: OSI Approved :: GNU General Public License (GPL)',
+    'Natural Language :: English',
+    'Operating System :: MacOS :: MacOS X',
+    'Operating System :: Microsoft :: Windows',
+    'Operating System :: OS Independent',
+    'Operating System :: POSIX',
+    'Operating System :: POSIX :: Linux',
+    'Operating System :: Unix',
+    'Programming Language :: C++',
+    'Programming Language :: Python',
+    'Topic :: Scientific/Engineering :: Bio-Informatics',
+    'Topic :: Scientific/Engineering :: Chemistry',
+    'Topic :: Software Development :: Libraries',
+]
+dependencies = [
+]
+readme = "README.md"
+
+[project.urls]
+homepage = "https://github.com/njzjz/openbabel-wheel"
+repository = "https://github.com/njzjz/openbabel-wheel"
+openbabel_homepage = "http://openbabel.org/"
+openbabel_repository = "https://github.com/openbabel/openbabel"
+
+[tool.setuptools.packages.find]
+include = ["openbabel*"]
+
+[tool.setuptools_scm]
