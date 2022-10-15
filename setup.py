@@ -18,6 +18,7 @@ setup(
                             "-DPYTHON_BINDINGS=ON",
                             "-DRUN_SWIG=ON",
                             "-DPYTHON_INCLUDE_PATH="+sysconfig.get_config_var('INCLUDEPY'),
+                            "-DBUILD_BY_PIP=ON",
                        ]),
     ],
     cmdclass=dict(build_ext=BuildExtension),

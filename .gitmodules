@@ -1,4 +1,4 @@
 [submodule "source"]
 	path = source
 	url = https://github.com/njzjz/openbabel
-	branch = openbabel-wheel-3-1-1
+	branch = openbabel-3-1-1-pypi
