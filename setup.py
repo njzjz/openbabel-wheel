@@ -9,9 +9,9 @@ from distutils import sysconfig
 
 cmake_options = []
 # for arm 64 on MacOS
-if "macosx_arm64" in os.environ["CIBW_BUILD"]:
+if "macosx_arm64" in os.environ.get("CIBW_BUILD", ""):
     # cross build
-    cmake_options.append("-DCMAKE_SYSTEM_PROCESSOR=arm64")
+    cmake_options.append("-DCMAKE_OSX_ARCHITECTURES=arm64")
 
 setup(
     ext_modules=[
