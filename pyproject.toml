@@ -59,7 +59,6 @@ include = ["openbabel*"]
 test-command = "python -c 'from openbabel import openbabel'"
 build = ["cp37-*", "cp38-*", "cp39-*", "cp310-*", "cp311-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
-environment-pass = ["CIBW_BUILD"]
 
 [tool.cibuildwheel.linux]
 # refer rdkit-pypi
@@ -76,6 +75,7 @@ before-all = [
     "make install",
     "cd ..",
 ]
+environment-pass = ["CIBW_BUILD"]
 
 [tool.cibuildwheel.macos]
 
