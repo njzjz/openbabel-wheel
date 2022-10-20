@@ -3,12 +3,13 @@ name: Build and upload to PyPI
 on:
   push:
     branches:
+      - master
     tags:
   pull_request:
 
 jobs:
   build_wheels:
-    name: Build wheels on ${{ matrix.os }}
+    name: Build wheels for cp${{ matrix.python }}-${{ matrix.platform_id }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -62,6 +63,23 @@ jobs:
           - os: windows-2019
             python: 311
             platform_id: win_amd64
+          # macos-arm64
+          - os: macos-latest
+            bitness: 64
+            python: 38
+            platform_id: macosx_arm64
+          - os: macos-latest
+            bitness: 64
+            python: 39
+            platform_id: macosx_arm64
+          - os: macos-latest
+            bitness: 64
+            python: 310
+            platform_id: macosx_arm64
+          - os: macos-latest
+            bitness: 64
+            python: 311
+            platform_id: macosx_arm64
     steps:
       - uses: actions/checkout@v2
         with:
@@ -76,6 +94,7 @@ jobs:
         run: python -m cibuildwheel --output-dir wheelhouse
         env:
           CIBW_BUILD_VERBOSITY: 1
+          CIBW_ARCHS: all
           CIBW_BUILD: cp${{ matrix.python }}-${{ matrix.platform_id }}
       - uses: actions/upload-artifact@v2
         with:
