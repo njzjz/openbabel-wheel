@@ -17,7 +17,7 @@ setup(
     ext_modules=[
         CMakeExtension(name="OpenBabel",
                        install_prefix="openbabel",
-                       source_dir=str(Path(__file__).parent.absolute() / "source"),
+                       source_dir=str(Path(__file__).parent / "source"),
                        cmake_configure_options=[
                             "-DPYTHON_EXECUTABLE=" + sys.executable,
                             "-DCMAKE_BUILD_TYPE=Release",
