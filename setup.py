@@ -26,6 +26,7 @@ setup(
                             "-DRUN_SWIG=ON",
                             "-DPYTHON_INCLUDE_PATH="+sysconfig.get_config_var('INCLUDEPY'),
                             "-DPYTHON_INCLUDE_DIR="+sysconfig.get_config_var('INCLUDEPY'),
+                            "-DPYTHON_LIBRARY="+os.path.join(sysconfig.get_config_var("LIBDIR"), sysconfig.get_config_var("LDLIBRARY")),
                             "-DBUILD_BY_PIP=ON",
                             *cmake_options,
                        ]),
