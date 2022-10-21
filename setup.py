@@ -12,6 +12,9 @@ cmake_options = []
 if "macosx_arm64" in os.environ.get("CIBW_BUILD", ""):
     # cross build
     cmake_options.append("-DCMAKE_OSX_ARCHITECTURES=arm64")
+elif "win" in os.environ.get("CIBW_BUILD", ""):
+    # https://stackoverflow.com/a/59933713/9567349
+    cmake_options.append("-DPYTHON_LIBRARY="+os.path.join(sysconfig.get_config_var("BINDIR"), "libs", "python3.lib"))
 
 setup(
     ext_modules=[
