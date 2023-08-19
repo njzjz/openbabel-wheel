@@ -41,20 +41,11 @@ requires-python = ">=3.7"
 
 [tool.scikit-build]
 minimum-version = "0.3.0"
-cmake.minimum-version = "3.1"
 wheel.install-dir = "openbabel"
-cmake.args = [
-    "-D OBABEL_VERSION=aeb6c169328f67137003194a0e03a205536f13e8",
-    "-D CMAKE_BUILD_TYPE=Release",
-    "-D WITH_INCHI=ON",
-    "-D PYTHON_BINDINGS=ON",
-    "-D RUN_SWIG=ON",
-    "-D BUILD_BY_PIP=ON",
-]
 metadata.version.provider = "scikit_build_core.metadata.setuptools_scm"
 
 [tool.scikit-build.cmake.define]
-OBABEL_VERSION = "aeb6c169328f67137003194a0e03a205536f13e8"
+OBABEL_VERSION = "2bb03cdfaf2f87a2d462a181339463c2e0b6eaef"
 CMAKE_BUILD_TYPE = "Release"
 WITH_INCHI = "ON"
 PYTHON_BINDINGS = "ON"
