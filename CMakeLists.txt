@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.11)
 project(ObabelPythonDistributions CXX)
 
-set(CMAKE_INSTALL_PREFIX .)
+set(CMAKE_INSTALL_PREFIX ${SKBUILD_PLATLIB_DIR})
 
 # download OpenBabel to ${OBABEL_SOURCE_ROOT}
 include(FetchContent)
