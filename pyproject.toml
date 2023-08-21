@@ -112,6 +112,6 @@ brew install gnu-sed eigen
 [tool.cibuildwheel.windows]
 
 before-all = [
-'''conan install libxml2/2.11.4 
+'''conan install libxml2/2.11.4@conan/stable
 '''
 ]
