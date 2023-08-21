@@ -13,4 +13,8 @@ FetchContent_GetProperties(openbabel)
 if(NOT openbabel_POPULATED)
   FetchContent_Populate(openbabel)
   add_subdirectory(${openbabel_SOURCE_DIR} ${openbabel_BINARY_DIR})
+  install(
+    DIRECTORY ${CMAKE_SOURCE_DIR}/openbabel/
+    DESTINATION ${SKBUILD_PLATLIB_DIR}
+  )
 endif()
