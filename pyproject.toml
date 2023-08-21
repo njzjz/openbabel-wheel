@@ -45,7 +45,7 @@ wheel.install-dir = "openbabel"
 metadata.version.provider = "scikit_build_core.metadata.setuptools_scm"
 
 [tool.scikit-build.cmake.define]
-OBABEL_VERSION = "4cc04cfd0b2834f9c6a6c033e7666d7b5173e24a"
+OBABEL_VERSION = "c1688f199c10a27c93467b3471f740077d6ec87a"
 CMAKE_BUILD_TYPE = "Release"
 WITH_INCHI = "ON"
 PYTHON_BINDINGS = "ON"
