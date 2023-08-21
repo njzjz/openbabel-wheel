@@ -15,6 +15,6 @@ if(NOT openbabel_POPULATED)
   add_subdirectory(${openbabel_SOURCE_DIR} ${openbabel_BINARY_DIR})
   install(
     DIRECTORY ${CMAKE_SOURCE_DIR}/openbabel/
-    DESTINATION ${SKBUILD_PLATLIB_DIR}
+    DESTINATION ${SKBUILD_PLATLIB_DIR}/openbabel
   )
 endif()
