@@ -108,3 +108,10 @@ fi
 brew install gnu-sed eigen
 '''
 ]
+
+[tool.cibuildwheel.macos]
+
+before-all = [
+'''conan install libxml2/2.11.4 
+'''
+]

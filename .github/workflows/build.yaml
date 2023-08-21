@@ -102,6 +102,10 @@ jobs:
         name: Install Python
         with:
           python-version: '3.8'
+      - name: Install Conan
+        id: conan
+        uses: turtlebrowser/get-conan@main
+        if: matrix.platform_id == 'win_amd64'
 
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.15
