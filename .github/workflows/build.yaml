@@ -96,12 +96,11 @@ jobs:
             platform_id: win_amd64
     steps:
       - uses: actions/checkout@v3
+      - uses: mamba-org/setup-micromamba@v1
         with:
-          submodules: true
-      - uses: actions/setup-python@v4
-        name: Install Python
-        with:
-          python-version: '3.8'
+          environment-name: build
+          create-args: >-
+            libxml2
 
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.15
