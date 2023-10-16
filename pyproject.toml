@@ -68,7 +68,7 @@ include = ["openbabel*"]
 
 [tool.cibuildwheel]
 test-command = [
-    "python -c 'from openbabel import openbabel'",
+    'python -c "from openbabel import openbabel"',
     "obabel -:C -oxyz --gen3d",
 ]
 build = ["cp37-*", "cp38-*", "cp39-*", "cp310-*", "cp311-*"]
