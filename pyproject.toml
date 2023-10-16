@@ -108,3 +108,7 @@ fi
 brew install gnu-sed eigen
 '''
 ]
+
+[tool.cibuildwheel.windows]
+before-build = "pip install delvewheel"
+repair-wheel-command = "delvewheel repair -w {dest_dir} {wheel}"
