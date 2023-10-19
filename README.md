@@ -22,7 +22,7 @@ The project is inspired by [rdkit-pypi](https://github.com/kuelumbus/rdkit-pypi)
 | Linux   | x86_64  | 64  | glibc >= 2.17  | 3.7-3.12      | 
 | macOS   | x86_64  | 64  | >= macOS-10.9  | 3.7-3.12      | 
 | macOS   | arm64   | 64  | >= macOS-11    | 3.8-3.12      |  
-| Windows | amd64   | 64  |                | 3.8-3.11      |
+| Windows | amd64   | 64  |                | 3.8-3.12      |
 
 ## Usage
 
