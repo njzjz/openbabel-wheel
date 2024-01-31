@@ -36,42 +36,42 @@ jobs:
             python: 312
             platform_id: manylinux_x86_64
           # macos-x86-64
-          - os: macos-latest
+          - os: macos-13
             python: 37
             platform_id: macosx_x86_64
-          - os: macos-latest
+          - os: macos-13
             python: 38
             platform_id: macosx_x86_64
-          - os: macos-latest
+          - os: macos-13
             python: 39
             platform_id: macosx_x86_64
-          - os: macos-latest
+          - os: macos-13
             python: 310
             platform_id: macosx_x86_64
-          - os: macos-latest
+          - os: macos-13
             python: 311
             platform_id: macosx_x86_64
-          - os: macos-latest
+          - os: macos-13
             python: 312
             platform_id: macosx_x86_64
           # macos-arm64
-          - os: macos-latest
+          - os: macos-14
             bitness: 64
             python: 38
             platform_id: macosx_arm64
-          - os: macos-latest
+          - os: macos-14
             bitness: 64
             python: 39
             platform_id: macosx_arm64
-          - os: macos-latest
+          - os: macos-14
             bitness: 64
             python: 310
             platform_id: macosx_arm64
-          - os: macos-latest
+          - os: macos-14
             bitness: 64
             python: 311
             platform_id: macosx_arm64
-          - os: macos-latest
+          - os: macos-14
             bitness: 64
             python: 312
             platform_id: macosx_arm64
