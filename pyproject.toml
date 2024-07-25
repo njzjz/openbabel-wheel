@@ -73,6 +73,7 @@ test-command = [
 ]
 build = ["cp37-*", "cp38-*", "cp39-*", "cp310-*", "cp311-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
+test-skip = ["cp37-macosx_x86_64"]
 
 [tool.cibuildwheel.linux]
 # refer rdkit-pypi
@@ -94,10 +95,29 @@ environment-pass = ["CIBW_BUILD"]
 [tool.cibuildwheel.macos]
 
 before-all = [
-'''brew install cairo
+'''if [[ "$CIBW_BUILD" == *macosx_arm64* ]]; then
+    rm /usr/local/lib/libfreetype.dylib
+    install_arm=( libpng libx11 libxau libxcb libxdmcp libxext libxrender fontconfig glib lzo pixman cairo freetype )
+    for i in "${install_arm[@]}"; do
+        response=$(brew fetch --force --bottle-tag=arm64_monterey $i | grep Downloaded )
+        download_path=$(echo $response | xargs -n 1 | tail -1)
+        brew reinstall $download_path
+    done
+else
+    rm /usr/local/lib/libfreetype.dylib
+    install_arm=( libpng libx11 libxau libxcb libxdmcp libxext libxrender fontconfig glib lzo pixman cairo freetype )
+    for i in "${install_arm[@]}"; do
+        response=$(brew fetch --force --bottle-tag=monterey $i | grep Downloaded )
+        download_path=$(echo $response | xargs -n 1 | tail -1)
+        brew reinstall $download_path
+    done
+fi
 brew install gnu-sed eigen
 '''
 ]
+
+[tool.cibuildwheel.macos.environment]
+MACOSX_DEPLOYMENT_TARGET = "12"
 
 [tool.cibuildwheel.windows]
 before-build = "pip install delvewheel"
