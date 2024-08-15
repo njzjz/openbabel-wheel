@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.11)
 project(ObabelPythonDistributions CXX)
 
+find_package(Python REQUIRED COMPONENTS Interpreter)
+execute_process(COMMAND ${Python_EXECUTABLE} -m cmeel cmake OUTPUT_VARIABLE CMEEL_PREFIX_PATH)
+list(APPEND CMAKE_PREFIX_PATH ${CMEEL_PREFIX_PATH})
+
 set(CMAKE_INSTALL_PREFIX ${SKBUILD_PLATLIB_DIR})
 
 # download OpenBabel to ${OBABEL_SOURCE_ROOT}
