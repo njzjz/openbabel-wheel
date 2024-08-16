@@ -61,6 +61,9 @@ jobs:
             python: 312
             platform_id: macosx_x86_64
           - os: macos-13
+            python: 313
+            platform_id: macosx_x86_64
+          - os: macos-13
             python: 313t
             platform_id: macosx_x86_64
           # macos-arm64
@@ -80,7 +83,10 @@ jobs:
             python: 312
             platform_id: macosx_arm64
           - os: macos-14
-            python: 312t
+            python: 313
+            platform_id: macosx_arm64
+          - os: macos-14
+            python: 313t
             platform_id: macosx_arm64
           # win-64
           #- os: windows-2019
