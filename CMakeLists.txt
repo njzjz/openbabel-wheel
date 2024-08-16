@@ -7,6 +7,7 @@ set(EIGEN3_INCLUDE_DIR ${CMEEL_PREFIX_PATH}/include/eigen3)
 message(STATUS EIGEN3_INCLUDE_DIR=${EIGEN3_INCLUDE_DIR})
 
 set(CMAKE_INSTALL_PREFIX ${SKBUILD_PLATLIB_DIR})
+add_definitions(-DPy_LIMITED_API=0x0304000)
 
 # download OpenBabel to ${OBABEL_SOURCE_ROOT}
 include(FetchContent)
