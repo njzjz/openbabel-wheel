@@ -41,6 +41,31 @@ jobs:
           - os: ubuntu-latest
             python: 313t
             platform_id: manylinux_x86_64
+          # linux-aarch64
+          - os: ubuntu-24.04-arm
+            python: 37
+            platform_id: manylinux_aarch64
+          - os: ubuntu-24.04-arm
+            python: 38
+            platform_id: manylinux_aarch64
+          - os: ubuntu-24.04-arm
+            python: 39
+            platform_id: manylinux_aarch64
+          - os: ubuntu-24.04-arm
+            python: 310
+            platform_id: manylinux_aarch64
+          - os: ubuntu-24.04-arm
+            python: 311
+            platform_id: manylinux_aarch64
+          - os: ubuntu-24.04-arm
+            python: 312
+            platform_id: manylinux_aarch64
+          - os: ubuntu-24.04-arm
+            python: 313
+            platform_id: manylinux_aarch64
+          - os: ubuntu-24.04-arm
+            python: 313t
+            platform_id: manylinux_aarch64
           # macos-x86-64
           - os: macos-13
             python: 37
