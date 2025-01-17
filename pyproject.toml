@@ -101,7 +101,7 @@ before-all = [
     rm /usr/local/lib/libfreetype.dylib
     install_arm=( libpng libx11 libxau libxcb libxdmcp libxext libxrender fontconfig glib lzo pixman cairo freetype )
     for i in "${install_arm[@]}"; do
-        response=$(brew fetch --force --bottle-tag=arm64_monterey $i | grep Downloaded )
+        response=$(brew fetch --force --bottle-tag=arm64_ventura $i | grep Downloaded )
         download_path=$(echo $response | xargs -n 1 | tail -1)
         brew reinstall $download_path
     done
@@ -109,7 +109,7 @@ else
     rm /usr/local/lib/libfreetype.dylib
     install_arm=( libpng libx11 libxau libxcb libxdmcp libxext libxrender fontconfig glib lzo pixman cairo freetype )
     for i in "${install_arm[@]}"; do
-        response=$(brew fetch --force --bottle-tag=monterey $i | grep Downloaded )
+        response=$(brew fetch --force --bottle-tag=ventura $i | grep Downloaded )
         download_path=$(echo $response | xargs -n 1 | tail -1)
         brew reinstall $download_path
     done
@@ -119,7 +119,7 @@ brew install gnu-sed
 ]
 
 [tool.cibuildwheel.macos.environment]
-MACOSX_DEPLOYMENT_TARGET = "12"
+MACOSX_DEPLOYMENT_TARGET = "13"
 
 [tool.cibuildwheel.windows]
 before-build = "pip install delvewheel"
