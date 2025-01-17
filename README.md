@@ -20,8 +20,9 @@ The project is inspired by [rdkit-pypi](https://github.com/kuelumbus/rdkit-pypi)
 | OS      | Arch    | Bit | Conditions     | Python        | 
 | ------- | ------- | --- | -------------- | ------------- |
 | Linux   | x86_64  | 64  | glibc >= 2.17  | 3.7-3.13      | 
+| Linux   | aarch64 | 64  | glibc >= 2.17  | 3.7-3.13      | 
 | macOS   | x86_64  | 64  | >= macOS-10.9  | 3.7-3.13      | 
-| macOS   | arm64   | 64  | >= macOS-11    | 3.8-3.13      |  
+| macOS   | arm64   | 64  | >= macOS-13    | 3.8-3.13      |  
 | Windows | amd64   | 64  |                | 3.8-3.13      |
 
 ## Usage
