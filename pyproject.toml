@@ -80,6 +80,8 @@ free-threaded-support = true
 [tool.cibuildwheel.linux]
 # refer rdkit-pypi
 before-all = [
+    # Openbabel.pybel has dependency on these x11 dev libraries
+    "yum install -y libXext-devel libXrender-devel",
     # Has eigen3-devel.aarch64
     "yum install -y epel-release",
     "yum install -y wget freetype-devel libpng12-devel pixman-devel zlib-devel libxml2-devel",
