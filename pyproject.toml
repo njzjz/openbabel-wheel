@@ -52,6 +52,8 @@ WITH_INCHI = "ON"
 PYTHON_BINDINGS = "ON"
 RUN_SWIG = "ON"
 BUILD_BY_PIP = "ON"
+# https://github.com/njzjz/openbabel-wheel/issues/49
+CMAKE_POLICY_VERSION_MINIMUM = "3.5"
 
 [project.urls]
 homepage = "https://github.com/njzjz/openbabel-wheel"

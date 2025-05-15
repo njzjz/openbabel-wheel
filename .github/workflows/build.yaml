@@ -140,6 +140,7 @@ jobs:
             platform_id: win_amd64
     steps:
       - uses: actions/checkout@v4
+      - uses: lukka/get-cmake@latest
       - name: Build wheels
         uses: pypa/cibuildwheel@v2.22
         env:
