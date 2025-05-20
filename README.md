@@ -24,6 +24,7 @@ The project is inspired by [rdkit-pypi](https://github.com/kuelumbus/rdkit-pypi)
 | macOS   | x86_64  | 64  | >= macOS-10.9  | 3.7-3.13      | 
 | macOS   | arm64   | 64  | >= macOS-13    | 3.8-3.13      |  
 | Windows | amd64   | 64  |                | 3.8-3.13      |
+| Windows | arm64   | 64  |                | 3.8-3.13      |
 
 ## Usage
 

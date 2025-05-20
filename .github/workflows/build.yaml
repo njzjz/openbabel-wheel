@@ -138,6 +138,31 @@ jobs:
           - os: windows-2019
             python: 313t
             platform_id: win_amd64
+          # win-arm64
+          #- os: windows-11-arm
+          #  python: 37
+          #  platform_id: win_amd64
+          - os: windows-11-arm
+            python: 38
+            platform_id: win_arm64
+          - os: windows-11-arm
+            python: 39
+            platform_id: win_arm64
+          - os: windows-11-arm
+            python: 310
+            platform_id: win_arm64
+          - os: windows-11-arm
+            python: 311
+            platform_id: win_arm64
+          - os: windows-11-arm
+            python: 312
+            platform_id: win_arm64
+          - os: windows-11-arm
+            python: 313
+            platform_id: win_arm64
+          - os: windows-11-arm
+            python: 313t
+            platform_id: win_arm64
     steps:
       - uses: actions/checkout@v4
       - uses: lukka/get-cmake@latest
