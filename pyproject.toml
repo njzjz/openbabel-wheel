@@ -11,7 +11,7 @@ name = "openbabel-wheel"
 dynamic = ["version"]
 description = "An unofficial repository to distribute OpenBabel prebuilt wheels through Pypi.."
 authors = [
-  {name = "Jinzhe Zeng", email = "jinzhe.zeng@rutgers.edu"},
+  {name = "Jinzhe Zeng", email = "jinzhe.zeng@ustc.edu.cn"},
   {name = "Noel O'Boyle", email = "openbabel-discuss@lists.sourceforge.net"},
 ]
 license = {file = "LICENSE"}
