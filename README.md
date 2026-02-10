@@ -17,13 +17,13 @@ The project is inspired by [rdkit-pypi](https://github.com/kuelumbus/rdkit-pypi)
 
 ## Available Builds
 
-| OS      | Arch    | Bit | Conditions     | Python        | 
+| OS      | Arch    | Bit | Conditions     | Python        |
 | ------- | ------- | --- | -------------- | ------------- |
-| Linux   | x86_64  | 64  | glibc >= 2.17  | 3.7-3.13      | 
-| Linux   | aarch64 | 64  | glibc >= 2.17  | 3.7-3.13      | 
-| macOS   | x86_64  | 64  | >= macOS-14    | 3.7-3.13      | 
-| macOS   | arm64   | 64  | >= macOS-14    | 3.8-3.13      |  
-| Windows | amd64   | 64  |                | 3.9-3.13      |
+| Linux   | x86_64  | 64  | glibc >= 2.17  | 3.7-3.14      |
+| Linux   | aarch64 | 64  | glibc >= 2.17  | 3.7-3.14      |
+| macOS   | x86_64  | 64  | >= macOS-14    | 3.7-3.14      |
+| macOS   | arm64   | 64  | >= macOS-14    | 3.8-3.14      |
+| Windows | amd64   | 64  |                | 3.9-3.14      |
 
 ## Usage
 
