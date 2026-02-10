@@ -67,28 +67,28 @@ jobs:
             python: 313t
             platform_id: manylinux_aarch64
           # macos-x86-64
-          - os: macos-13
+          - os: macos-15-intel
             python: 37
             platform_id: macosx_x86_64
-          - os: macos-13
+          - os: macos-15-intel
             python: 38
             platform_id: macosx_x86_64
-          - os: macos-13
+          - os: macos-15-intel
             python: 39
             platform_id: macosx_x86_64
-          - os: macos-13
+          - os: macos-15-intel
             python: 310
             platform_id: macosx_x86_64
-          - os: macos-13
+          - os: macos-15-intel
             python: 311
             platform_id: macosx_x86_64
-          - os: macos-13
+          - os: macos-15-intel
             python: 312
             platform_id: macosx_x86_64
-          - os: macos-13
+          - os: macos-15-intel
             python: 313
             platform_id: macosx_x86_64
-          - os: macos-13
+          - os: macos-15-intel
             python: 313t
             platform_id: macosx_x86_64
           # macos-arm64
@@ -114,12 +114,6 @@ jobs:
             python: 313t
             platform_id: macosx_arm64
           # win-64
-          #- os: windows-2019
-          #  python: 37
-          #  platform_id: win_amd64
-          - os: windows-2019
-            python: 38
-            platform_id: win_amd64
           - os: windows-2019
             python: 39
             platform_id: win_amd64

@@ -121,7 +121,7 @@ brew install gnu-sed
 ]
 
 [tool.cibuildwheel.macos.environment]
-MACOSX_DEPLOYMENT_TARGET = "13"
+MACOSX_DEPLOYMENT_TARGET = "14"
 
 [tool.cibuildwheel.windows]
 before-build = "pip install delvewheel"
