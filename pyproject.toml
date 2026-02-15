@@ -38,7 +38,7 @@ classifiers = [
 dependencies = [
 ]
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.8"
 
 [tool.scikit-build]
 minimum-version = "0.3.0"
@@ -74,9 +74,8 @@ test-command = [
     """python -c "from openbabel import openbabel;ff = openbabel.OBForceField.FindType('mmff94');ff.DiverseConfGen(0.5, 100000, 50)" """,
     "obabel -:C -oxyz --gen3d",
 ]
-build = ["cp37-*", "cp38-*", "cp39-*", "cp310-*", "cp311-*", "cp312-*", "cp313-*", "cp313t-*"]
+build = ["cp38-*", "cp39-*", "cp310-*", "cp311-*", "cp312-*", "cp313-*", "cp313t-*"]
 skip = ["*-win32", "*-manylinux_i686", "*-musllinux*"]
-test-skip = ["cp37-macosx_x86_64"]
 free-threaded-support = true
 
 [tool.cibuildwheel.linux]
