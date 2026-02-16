@@ -150,9 +150,6 @@ jobs:
           - os: windows-2019
             python: 314
             platform_id: win_amd64
-          - os: windows-2019
-            python: 314t
-            platform_id: win_amd64
     steps:
       - uses: actions/checkout@v6
       - uses: lukka/get-cmake@latest
