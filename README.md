@@ -11,18 +11,18 @@
 pip install openbabel-wheel
 ```
 
-The package requires Python 3.7 and above.
+The package requires Python 3.8 and above.
 
 The project is inspired by [rdkit-pypi](https://github.com/kuelumbus/rdkit-pypi) and powered by [scikit-build-core](https://github.com/scikit-build/scikit-build-core) and [cibuildwheel](https://github.com/pypa/cibuildwheel). 
 
 ## Available Builds
 
-| OS      | Arch    | Bit | Conditions     | Python        | 
+| OS      | Arch    | Bit | Conditions     | Python        |
 | ------- | ------- | --- | -------------- | ------------- |
-| Linux   | x86_64  | 64  | glibc >= 2.17  | 3.7-3.13      | 
-| Linux   | aarch64 | 64  | glibc >= 2.17  | 3.7-3.13      | 
-| macOS   | x86_64  | 64  | >= macOS-14    | 3.7-3.13      | 
-| macOS   | arm64   | 64  | >= macOS-14    | 3.8-3.13      |  
+| Linux   | x86_64  | 64  | glibc >= 2.17  | 3.8-3.13      |
+| Linux   | aarch64 | 64  | glibc >= 2.17  | 3.8-3.13      |
+| macOS   | x86_64  | 64  | >= macOS-14    | 3.8-3.13      |
+| macOS   | arm64   | 64  | >= macOS-14    | 3.8-3.13      |
 | Windows | amd64   | 64  |                | 3.9-3.13      |
 
 ## Usage
