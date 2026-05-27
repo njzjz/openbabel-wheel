@@ -1,5 +1,12 @@
 # openbabel-wheel
 
+> [!IMPORTANT]
+> Starting from Open Babel 3.2.0, the official `openbabel` package on PyPI provides prebuilt wheels. This `openbabel-wheel` package is therefore deprecated; please install `openbabel` directly instead:
+>
+> ```sh
+> pip install openbabel
+> ```
+
 [![Pypi version](https://img.shields.io/pypi/v/openbabel-wheel)](https://pypi.org/project/openbabel-wheel/)
 [![Pypi downloads](https://img.shields.io/pypi/dm/openbabel-wheel)](https://pypi.org/project/openbabel-wheel/)
 [![Pypi downloads](https://img.shields.io/pypi/dw/openbabel-wheel)](https://pypi.org/project/openbabel-wheel/)
